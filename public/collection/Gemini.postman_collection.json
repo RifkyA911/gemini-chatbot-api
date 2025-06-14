@@ -1,0 +1,165 @@
+{
+	"info": {
+		"_postman_id": "701e9a65-8408-480f-b714-d120139d2102",
+		"name": "Gemini",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "15765067"
+	},
+	"item": [
+		{
+			"name": "Home",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"prompt\": \"kapan\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}",
+					"host": [
+						"{{baseUrl}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "generate-text",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"prompt\": \"Kenapa kucing saat jatuh selalu kaki duluan?\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/api/generate-text",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api",
+						"generate-text"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "generate-from-image",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "prompt",
+							"value": "jelaskan gambar ini",
+							"type": "text"
+						},
+						{
+							"key": "image",
+							"type": "file",
+							"src": "/C:/Users/rifky/Downloads/listrik.jpg"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{baseUrl}}/api/generate-from-image",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api",
+						"generate-from-image"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "generate-from-document",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "prompt",
+							"value": "jelaskan file ini",
+							"type": "text"
+						},
+						{
+							"key": "document",
+							"type": "file",
+							"src": [
+								"/C:/Users/rifky/Downloads/496842666_24480781424843802_8630826384454061429_n.jpg",
+								"/C:/Users/rifky/Downloads/lorem-ipsum.pdf"
+							]
+						}
+					]
+				},
+				"url": {
+					"raw": "{{baseUrl}}/api/generate-from-document",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api",
+						"generate-from-document"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "generate-from-audio",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "prompt",
+							"value": "jelaskan audio ini",
+							"type": "text"
+						},
+						{
+							"key": "audio",
+							"type": "file",
+							"src": "/C:/Users/rifky/Music/Meow.mp3"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{baseUrl}}/api/generate-from-audio",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api",
+						"generate-from-audio"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
