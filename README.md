@@ -26,6 +26,7 @@ This project demonstrates how to build a robust RESTful API using **Bun**, **Exp
 -   📁 **File Management**: Uses `multer` for easy file uploads handling.
 -   🧹 **Automatic File Cleanup**: Automatically deletes uploaded files after processing to keep the server clean.
 -   💡 **Smart Input**: Combines `prompt` + `file` as multimodal input for more contextual AI responses.
+-   💬 **Built-in Chatbot GUI**: Access an interactive web-based Gemini AI chatbot. This intuitive interface allows you to chat with Gemini AI in real time. The GUI is designed for example of usage chatbot.
 
 ---
 
@@ -152,6 +153,18 @@ The following endpoints are available to interact with Gemini.
     ```bash
     curl -X POST -F "audio=@/path/to/your/audio.mp3" -F "prompt=Describe this Audio." http://localhost:3000/generate-from-audio
     ```
+
+---
+
+## 🖥️ Gemini Chatbot GUI
+
+You can interact with Gemini AI using a built-in web-based chatbot GUI, accessible directly at [http://localhost:3000/](http://localhost:3000/).
+
+<p align="center">
+    <img src="public/img/example.png" alt="Gemini Chatbot GUI Preview" width="600"/>
+</p>
+
+This intuitive interface allows you to chat with Gemini AI in real time, making it easy to test and explore the API's capabilities without needing external tools.
 
 ---
 
